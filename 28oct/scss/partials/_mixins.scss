@@ -4,3 +4,29 @@
     align-items: center;
 }
 
+@mixin flex($justify: center, $align: center, $direction: row, $gap: 0) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin button-style($bg, $color) {
+  padding: 10px 20px;
+  border: none;
+  background-color: $bg;
+  color: $color;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+@mixin heading($size, $weight: 500) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin container-center($width: 80vw) {
+  width: $width;
+  margin: 0 auto;
+}
