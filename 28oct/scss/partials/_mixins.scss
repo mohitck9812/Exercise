@@ -4,6 +4,7 @@
     align-items: center;
 }
 
+
 @mixin flex($justify: center, $align: center, $direction: row, $gap: 0) {
   display: flex;
   justify-content: $justify;

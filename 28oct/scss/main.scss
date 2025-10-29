@@ -6,6 +6,7 @@
     padding: 0;
 }
 
+
 body {
     font-family: $base-font-family;
 }
@@ -15,8 +16,7 @@ body {
 }
 
 .centered-container {
-    width: 80vw;
-    margin: 0 auto;
+    @use container-center($width: 80vw)
 }
 
 .nav-list {
@@ -151,12 +151,9 @@ body {
 }
 
 .all-customer{
-    display: flex;
+    @use flex($justify: space-between, $align: center, $gap: 14px);
     padding: 16px 0px;
-    justify-content: space-between;
-    gap: 14px;
     height: 48px;
-    align-items: center;
 }
 
 .all-customer-icon{
@@ -166,7 +163,6 @@ body {
 
 .list-customer-arrow{
     height: 24px;
-
 }
 
 .all-customer-list{
@@ -374,7 +370,7 @@ body {
 .email-inp{
     height: 40px;
     width: 255px;
-    background-color: #263238;
+    background-color: transparent;
     color:#fff;
 }
 
