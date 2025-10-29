@@ -4,6 +4,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -16,9 +17,9 @@ body {
 }
 
 .centered-container {
-    // @use container-center($width: 80vw)
-    width: 80vw;
-  margin: 0 auto;
+    @include container-center($width: 80vw)
+//     width: 80vw;
+//   margin: 0 auto;
 }
 
 .nav-list {
@@ -153,12 +154,12 @@ body {
 }
 
 .all-customer{
-    // @import flex($justify: space-between, $direction: row, $align: center, $gap: 14px);
-    display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  gap: 14px;
+    @include flex($justify: space-between, $direction: row, $align: center, $gap: 14px);
+    // display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   flex-direction: row;
+//   gap: 14px;
     padding: 16px 0px;
     height: 48px;
 }
@@ -213,8 +214,8 @@ body {
     justify-content: space-around;
 }
 
-.ticket{
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.ticket {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     padding: 24px 16px;
     height: 260px;
     width: 300px;
@@ -222,6 +223,9 @@ body {
     flex-direction: column;
     justify-content: space-around;
 }
+
+
+
 
 .flex-column-around{
     display: flex;
@@ -375,14 +379,25 @@ body {
     }
 }
 
+.form{
+    position: relative;
+}
+
 .email-inp{
     height: 40px;
     width: 255px;
     background-color: transparent;
-    color:#fff;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 6px;
+    padding-left: 7px;
 }
 
 .submit-button{
     margin-left: -26px;
     background-color: transparent;
+    position: absolute;
+    right: 14px;
+    top: 12px;
+    border: transparent;
 }
