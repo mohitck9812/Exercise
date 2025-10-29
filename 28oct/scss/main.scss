@@ -16,7 +16,9 @@ body {
 }
 
 .centered-container {
-    @use container-center($width: 80vw)
+    // @use container-center($width: 80vw)
+    width: 80vw;
+  margin: 0 auto;
 }
 
 .nav-list {
@@ -151,7 +153,12 @@ body {
 }
 
 .all-customer{
-    @use flex($justify: space-between, $align: center, $gap: 14px);
+    // @import flex($justify: space-between, $direction: row, $align: center, $gap: 14px);
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 14px;
     padding: 16px 0px;
     height: 48px;
 }
@@ -273,6 +280,7 @@ body {
 .register-button{
     height: 55px;
     width: 128px;
+    font-size: 16px;
 }
 
 //footer
@@ -376,5 +384,5 @@ body {
 
 .submit-button{
     margin-left: -26px;
-    background-color: $footer-bg;
+    background-color: transparent;
 }
