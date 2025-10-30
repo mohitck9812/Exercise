@@ -63,10 +63,10 @@ function getInput() {
   return { name, mrp, category };
 }
 
-// (function newProduct() {
-//     const input = getInput();
-//   new Product(input.name, input.mrp, input.category);
-// })();
+(function newProduct() {
+    const input = getInput();
+  new Product(input.name, input.mrp, input.category);
+})();
 
 addProduct.addEventListener("click", () => {
   const input = getInput();
