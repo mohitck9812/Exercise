@@ -7,7 +7,7 @@ function displayCostlyProd(value){
     costlyProd.innerHTML = `Price of costliest product is: ${value}`;
 }
 
-function maxPrice(arr){
+function maxPrice(){
     if (arguments.length === 0) displayCostlyProd("Enter product first");
   let max = arguments[0];
   for (let i = 1; i < arguments.length; i++) {
