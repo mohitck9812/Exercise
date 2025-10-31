@@ -8,11 +8,11 @@ function displayCostlyProd(value){
 }
 
 function maxPrice(arr){
-    if (arr.length === 0) displayCostlyProd("Enter product first");
-  let max = arr[0];
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > max) {
-      max = arr[i];
+    if (arguments.length === 0) displayCostlyProd("Enter product first");
+  let max = arguments[0];
+  for (let i = 1; i < arguments.length; i++) {
+    if (arguments[i] > max) {
+      max = arguments[i];
     }
   }
   return displayCostlyProd(max);
@@ -47,7 +47,7 @@ function Product(name, mrp, category) {
   });
 
   price.push(discountedPrice);
-  maxPrice(price);
+  maxPrice.apply(null,price);
 
   outerdiv.appendChild(card);
 }
