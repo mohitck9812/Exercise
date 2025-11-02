@@ -4,7 +4,6 @@ const localData = JSON.parse(localStorage.getItem("studentData") )|| [];
 
 
 // to eedit this 
-
 function studentEntry(studentData){
     const studentName = studentData.name;
     const [hindiMarks, englishMarks, mathMarks, scienceMarks, ssMarks, totalMarks, average] = studentData.value;

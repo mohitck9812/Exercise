@@ -5,7 +5,7 @@ const message = document.getElementById('message');
 const form = document.getElementById('userForm');
 
 form.addEventListener('submit', function(e){
-    e.preventDefault();
+  e.preventDefault();
     const name = userName.value.trim();
       const age = Number(ageInput.value);
 
