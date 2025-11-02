@@ -1,16 +1,16 @@
 const addStudent = document.getElementById('addStudent');
 const table = document.getElementById('tableBody');
-const localData = JSON.parse(localStorage.getItem("studentData") )|| [];
+const localData = JSON.parse(localStorage.getItem("studentData")) || [];
 
+localData.forEach(student => studentEntry(student));
 
-// to eedit this 
-function studentEntry(studentData){
+function studentEntry(studentData) {
     const studentName = studentData.name;
-    const [hindiMarks, englishMarks, mathMarks, scienceMarks, ssMarks, totalMarks, average] = studentData.value;
+    const [hindiMarks, englishMarks, mathMarks, scienceMarks, ssMarks, totalMarks, average] = studentData.marks;
 
     const newRow = document.createElement("tr");
 
-    newRow.innerHTML += `
+    newRow.innerHTML = `
         <td>${studentName}</td>
         <td>${hindiMarks}</td>
         <td>${englishMarks}</td>
@@ -21,20 +21,10 @@ function studentEntry(studentData){
         <td>${average}</td>
     `;
 
-    localData.push({studentName : marks});
-
-    localStorage.setItem("studentData",JSON.stringify(localData));
-
     table.appendChild(newRow);
 }
 
-// localData.array.forEach(element => {
-//     studentEntry()
-// });
-
 addStudent.addEventListener('click', () => {
-    console.log("add button clicked");
-
     const studentName = prompt("Enter the name of student");
     if (!studentName) {
         alert("Student name cannot be empty!");
@@ -57,12 +47,15 @@ addStudent.addEventListener('click', () => {
     const ssMarks = getMarks("Social Science");
 
     const totalMarks = hindiMarks + englishMarks + mathMarks + scienceMarks + ssMarks;
-    const average = (totalMarks/5).toFixed(2);
-    
-    const studentData = {marks : [hindiMarks, englishMarks, mathMarks, scienceMarks,ssMarks, totalMarks, average],
-        name: studentName
-    }
+    const average = (totalMarks / 5).toFixed(2);
+
+    const studentData = {
+        name: studentName,
+        marks: [hindiMarks, englishMarks, mathMarks, scienceMarks, ssMarks, totalMarks, average]
+    };
+
+    localData.push(studentData);
+    localStorage.setItem("studentData", JSON.stringify(localData));
 
     studentEntry(studentData);
-
-})
+});

@@ -1,13 +1,14 @@
 //task 5
 
 const finalArray = document.getElementById("finalArray");
-const addNumber = document.getElementById("addNumber");
+const addNumber = document.querySelector('form');
 const inputNumber = document.getElementById("numberInput");
 const inputIndex = document.getElementById("indexInput");
 
 const arr = [];
 
-addNumber.addEventListener("click", () => {
+addNumber.addEventListener("submit", (e) => {
+  e.preventDefault();
   const num = inputNumber.value;
   const idx = inputIndex.value;
   if (num !== "" && idx !== "") {

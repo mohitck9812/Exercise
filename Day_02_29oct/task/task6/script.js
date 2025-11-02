@@ -3,12 +3,13 @@
 const finalArray = document.getElementById("finalArray");
 const oldNumber = document.getElementById("oldNumber");
 const newNumber = document.getElementById("newNumber");
-const replaceBtn = document.getElementById("replaceBtn");
+const replaceBtn = document.querySelector('form');
 
 let arr = [3, 6, 1, 34, 9, 62, 2, 6, 34, 1];
 finalArray.textContent = `Array: [ ${arr.join(", ")} ]`;
 
-replaceBtn.addEventListener("click", () => {
+replaceBtn.addEventListener("submit", (e) => {
+  e.preventDefault();
   const oldNum = oldNumber.value;
   const newNum = newNumber.value;
   if (oldNum !== "" && newNum !== "") {
