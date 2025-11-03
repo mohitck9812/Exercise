@@ -38,10 +38,10 @@ const person = {
 };
 
 function objDestructure() {
-  console.log(`${person.name} lives in ${person.address.city}`);
-  // doubt in the last part of the question
+  const {name= "", address: {city="unknown city", country="unknown country"}={} }= person || {};
+  console.log(`${name} lives in ${city}`);
   console.log(
-    `City: ${person.address.city} and that is in ${person.address.country} country`
+    `City: ${city} and that is in ${country} country`
   );
 }
 
@@ -49,8 +49,7 @@ objDestructure();
 
 // 5. Rest Operator
 
-function sumAll() {
-  const args = [...arguments];
+function sumAll(...args) {
   return args.reduce((acc, val) => acc + val, 0);
 }
 
@@ -95,9 +94,7 @@ const data = [
 ];
 
 function extractAndDisplay() {
-  const name = data[1].name;
-  const age = data[0].age;
-
+  const [{age}, {name}] = data
   return `${name}'s age is ${age}`;
 }
 
