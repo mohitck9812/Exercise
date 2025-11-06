@@ -150,5 +150,5 @@ tar -xvf home_backup.tar
 ```
 
 👨‍💻 Author
-Name: Mohit CK
+Name: Mohit 
 📘 Purpose: Quick reference guide for essential Linux commands used in DevOps and system administration.
