@@ -1,3 +1,6 @@
+import customeException.InvalidEmailException;
+import helperClasses.Book;
+
 public class Solution {
 
     // question 1
@@ -71,7 +74,48 @@ public double add(double a, double b) {
     }
 
 //    Question 6 -> Student report
-//    having doubt, should i crreate a pojo of student of an array or something which should work as db
+//    having doubt, should i create a pojo of student of an array or something which should work as db
 
+//    Question 11-> Division with Exception Handling
+        public void divisionWithException(int num1, int num2){
+            try{
+                System.out.println(num1 / num2);
+            }catch (Exception e){
+                System.out.println("Can not perform division with denominator zero");
+            }finally {
+                System.out.println("Division Completed");
+            }
+        }
 
+//        Quesiton 12 -> nested try catch
+        public void nestedTryCatch(){
+            try {
+                int[] numbers = new int[5];
+
+                try {
+                    int a = 10, b = 0;
+                    int result = a / b;
+                    System.out.println("Result: " + result);
+                }
+                catch (ArithmeticException e) {
+                    System.out.println("Caught ArithmeticException: Division by zero not allowed.");
+                }
+                numbers[10] = 50;
+                System.out.println("Value assigned to array.");
+            }
+            catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Caught ArrayIndexOutOfBoundsException: Invalid array index.");
+            }
+            System.out.println("Program continues normally...");
+        }
+
+//        Question 14 -> custom Exception
+        static void validateEmail(String email) throws InvalidEmailException {
+            if (!email.contains("@")) {
+            throw new InvalidEmailException("Invalid Email: Missing '@' symbol.");
+            } else {
+                System.out.println("Valid Email: " + email);
+            }
+        }
 }
+
