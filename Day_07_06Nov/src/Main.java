@@ -46,11 +46,11 @@ class Main{
 //        int choice = sc.nextInt();
 //        s.calculator(num1, num2, choice);
 
-//        task 6
+//        task 7
 //        BankAccountClass bac = new BankAccountClass(646845168L, "Mohit", 165198491.16);
 //        bac.displayDetail();
 
-//        task 7
+//        task 8
 //        StaticCounter staticCounter = new StaticCounter();
 //        StaticCounter staticCounter1 = new StaticCounter();
 //        staticCounter1.displayCounter();
@@ -58,20 +58,20 @@ class Main{
 //        staticCounter2.displayCounter();
 //        staticCounter.displayCounter();
 
-//            task 8
+//            task 9
 //        System.out.println(MathUtils.max(5, 4));
 //        System.out.println(MathUtils.min(5,4));
 //        System.out.println(MathUtils.average(new int[]{2, 2, 5}));
 
-//        Question 9 -> Parametrized Constructor
+//        Question 10-> Parametrized Constructor
 //        Book book = new Book("Atomic Habit", "James Clear", 500);
 //        book.displayDetail();
 
-//        Question 10-> Constructor Overloading
+//        Question 11-> Constructor Overloading
 //        Car car1 = new Car("Mustang Mach 1");
 //        Car car2  = new Car("Shelby Mustang", 500000);
 
-//        Question 11 -> division with exception
+//        Question 12 -> division with exception
 //        System.out.print("Enter numerator: ");
 //        int num1 = sc.nextInt();
 //        System.out.print("Enter denominator: ");
@@ -79,10 +79,10 @@ class Main{
 //        s.divisionWithException(num1, num2);
 
 
-//         Question 12 -> Nested Try-Catch
+//         Question 13 -> Nested Try-Catch
 //        s.nestedTryCatch();
 
-//        Question 13 -> Exception Propagation
+//        Question 14 -> Exception Propagation
 //            ExpceptionPropagation obj = new ExpceptionPropagation();
 //        try {
 //            obj.m1();
@@ -90,7 +90,7 @@ class Main{
 //            System.out.println("Exception handled in main(): " + e);
 //        }
 
-//        Question 14 -> Custom Exception
+//        Question 15 -> Custom Exception
 //        String[] emails = {"mohit.ck", "user@example.com", "hello.world"};
 //
 //        for (String email : emails) {
@@ -103,7 +103,7 @@ class Main{
 //
 //        System.out.println("Email validation completed.");
 
-//        Question 15 -> Pojo
+//        Question 16 -> Pojo
 //        List<Customer> customers = new ArrayList<>();
 //
 //        customers.add(new Customer(1, "Mohit", "mohit@example.com"));
@@ -115,7 +115,7 @@ class Main{
 //            System.out.println(c);
 //        }
 
-//        Question 16 -> Mini banking app
+//        Question 17 -> Mini banking app
 //        try {
 //            BankAccount acc1 = new BankAccount("Mohit", 5000);
 //            BankAccount acc2 = new BankAccount("Lalit", 2000);
@@ -136,7 +136,7 @@ class Main{
 //            System.out.println("Error: " + e.getMessage());
 //        }
 
-//        Question 17 -> Employee Management System
+//        Question 18 -> Employee Management System
 //        List<Employee> employees = new ArrayList<>();
 //
 //        employees.add(new FullTimeEmployee(1, "Mohit", 50000));
@@ -149,7 +149,7 @@ class Main{
 //            emp.displayInfo(); // Calls overridden method
 //        }
 
-//        Question 18 -> Product catalog
+//        Question 19 -> Product catalog
 //        try {
 //            // Creating product objects
 //            Product p1 = new Product(101, "Laptop", 65000);

@@ -1,0 +1,3 @@
+## Question 1 ->  What is the Java Collections Framework? Explain its advantages.
+
+The **Java Collections Framework (JCF)** is a powerful set of classes and interfaces in the `java.util` package that provides built-in data structures like `List`, `Set`, `Queue`, and `Map`, along with utility methods for operations such as sorting, searching, and iteration. It offers a unified and reusable approach to handling groups of objects, ensuring consistency, type safety, and improved performance through optimized implementations. By using the Collections Framework, developers can write cleaner, faster, and more maintainable code while reducing the need to implement complex data-handling logic from scratch.
