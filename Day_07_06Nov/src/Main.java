@@ -1,6 +1,7 @@
 import Entity.Customer;
 import Entity.Employee;
 import Entity.Product;
+import Entity.Student;
 import customeException.InsufficientFundsException;
 import customeException.InvalidAmountException;
 import customeException.InvalidEmailException;
@@ -45,6 +46,17 @@ class Main{
 //        System.out.print("Enter your choice (1-4): ");
 //        int choice = sc.nextInt();
 //        s.calculator(num1, num2, choice);
+
+//         task 6
+//        Student s1 = new Student("Mohit", new int[]{100,55,98});
+//        Student s2 = new Student("Rohit", new int[]{50,65,68});
+//        Student s3 = new Student("Lalit", new int[]{68,42,97});
+//
+//        List<Student> listOfStudent = List.of(s1, s2, s3);
+//        s.averageAndTotalOfAllStudent(listOfStudent);
+//        s.calculateTotalAndAverage(s1);
+//        s.calculateTotalAndAverage(s2);
+//        s.calculateTotalAndAverage(s3);
 
 //        task 7
 //        BankAccountClass bac = new BankAccountClass(646845168L, "Mohit", 165198491.16);

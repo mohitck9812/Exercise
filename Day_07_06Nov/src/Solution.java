@@ -1,5 +1,11 @@
+import Entity.Student;
 import customeException.InvalidEmailException;
 import helperClasses.Book;
+
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.IntStream;
 
 public class Solution {
 
@@ -75,6 +81,28 @@ public double add(double a, double b) {
 
 //    Question 6 -> Student report
 //    having doubt, should i create a pojo of student of an array or something which should work as db
+        public void calculateTotalAndAverage(Student student){
+            int total = Arrays.stream(student.marks).sum();
+            double average = total/student.marks.length;
+            System.out.println("Total marks: " + total);
+            System.out.println("And the average of " + student.name + " is: " + average);
+        }
+
+        public void averageAndTotalOfAllStudent(List<Student> studentList){
+            IntStream allMarks = studentList.stream().flatMapToInt(s -> Arrays.stream(s.marks));
+
+            int total = allMarks.sum();
+
+            double average = studentList.stream()
+                    .flatMapToInt(s -> Arrays.stream(s.marks))
+                    .average()
+                    .orElse(0);
+
+            System.out.println("Total marks of all students: " + total);
+            System.out.println("Average marks of all students: " + average);
+        }
+
+
 
 //    Question 11-> Division with Exception Handling
         public void divisionWithException(int num1, int num2){
