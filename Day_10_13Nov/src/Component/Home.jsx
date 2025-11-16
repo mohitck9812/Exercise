@@ -1,7 +1,12 @@
-import { useNavigate, Outlet } from "react-router-dom";
+import { useNavigate, Outlet, Navigate } from "react-router-dom";
 
 export default function Home() {
   const navigate = useNavigate();
+  const authData = JSON.parse(localStorage.getItem("authData"));
+
+  if (!authData?.user) {
+    return <Navigate to="/login" replace />;
+  }
 
   return (
     <div className="h-dvh bg-gray-600 flex flex-col gap-4 items-center justify-center">

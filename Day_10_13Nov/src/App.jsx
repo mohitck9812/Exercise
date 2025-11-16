@@ -8,11 +8,13 @@ import Counter from "./Component/Counter";
 import DigitalClock from "./Component/DigitalClock";
 
 function App() {
+      const authData = JSON.parse(localStorage.getItem("authData"));
+  
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Home />} >
+        <Route path="/login" element={<Login authData={authData}/>} />
+        <Route path="/" element={<Home authData={authData}/>} >
           <Route path="counter" element={<Counter />} />
           <Route path="clock" element={<DigitalClock />} />
         </Route>
